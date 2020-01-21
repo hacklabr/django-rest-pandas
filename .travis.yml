@@ -45,9 +45,24 @@ matrix:
         - REST="djangorestframework==3.6.4"
         - PANDAS="pandas==0.24.2"
         - OPENPYXL="openpyxl==2.6.4"
-    - name: "Code Lint"
+    - name: "Python Lint"
       env:
         - LINT="flake8"
+    - name: "JavaScript Tests"
+      language: node
+      node_js: 12
+      install: npm ci
+      script: npm test
+    - name: "JavaScript Lint"
+      language: node
+      node_js: 12
+      install: npm ci
+      script: npm run lint
+    - name: "JavaScript Build"
+      language: node
+      node_js: 12
+      install: npm ci
+      script: npm run build
 install:
  - pip install --upgrade pip
  - pip install $DJANGO $REST $PANDAS $OPENPYXL $MATPLOTLIB $DJPANDAS $LINT

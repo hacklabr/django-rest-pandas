@@ -1,0 +1,50 @@
+{
+    "name": "@wq/chart",
+    "version": "1.2.0-beta.1",
+    "description": "d3-powered CSV charts for django-rest-pandas",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "scripts": {
+        "test": "jest --verbose",
+        "build": "rollup -c",
+        "prettier": "prettier --write *.js{,on} {src/,src/__tests__/}*.js{,on}",
+        "lint": "eslint *.js {,src/,src/__tests__/}*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wq/django-rest-pandas.git"
+    },
+    "keywords": [
+        "wq",
+        "d3",
+        "csv",
+        "pandas",
+        "chart"
+    ],
+    "author": "S. Andrew Sheppard",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/wq/django-rest-pandas/issues"
+    },
+    "homepage": "https://github.com/wq/django-rest-pandas",
+    "dependencies": {
+        "d3": "^5.12.0",
+        "mustache": "^4.0.0"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.6.2",
+        "@rollup/plugin-node-resolve": "^7.0.0",
+        "babel-eslint": "^10.0.3",
+        "eslint": "^6.5.1",
+        "eslint-plugin-jest": "^22.17.0",
+        "jest": "^24.9.0",
+        "jest-fetch-mock": "^2.1.2",
+        "prettier": "^1.18.2",
+        "rollup": "^1.23.1",
+        "rollup-plugin-babel": "^4.3.3"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true
+    }
+}
